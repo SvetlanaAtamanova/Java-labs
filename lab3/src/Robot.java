@@ -13,10 +13,10 @@ public class Robot implements Runnable {
                 Student currStudent = queueOfStudents.peek();
                 if (currStudent != null) {
                     if (currStudent.getSubject().equals(this.subjectName)) {
-                        Student tmp = queueOfStudents.take();
-                        System.out.println("Робот по " + subjectName + " проверяет студента №:" + tmp.getNumberOfStudent());
-                        while (tmp.getLabsCount() != 0) {
-                            process(tmp);
+                        currStudent = queueOfStudents.take();
+                        System.out.println("Робот по " + subjectName + " начинает проверять студента №:" + currStudent.getNumberOfStudent());
+                        while (currStudent.getLabsCount() != 0) {
+                            process(currStudent);
                         }
                     }
                     else if (currStudent.getSubject().equals("end")){
@@ -32,8 +32,9 @@ public class Robot implements Runnable {
     }
     private void process(Student currStudent) throws InterruptedException {
         for (int i = 0; i < currStudent.getLabsCount() / 5; i++) {
-            System.out.println("Робот по " + subjectName + " проверил 5 работ");
             currStudent.decreaseLabs();
+            System.out.println("Робот по " + subjectName + " проверил 5 работ у студента №:" + currStudent.getNumberOfStudent()
+                    + " осталось:" + currStudent.getLabsCount() + " работ");
             Thread.sleep(100);
         }
     }
