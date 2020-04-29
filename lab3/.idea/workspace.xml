@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c36df02d-15e1-4b39-a2d0-0354260d1ca0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/Robot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/Robot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Robot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Robot.java" afterDir="false" />
+    <list default="true" id="dba57ac3-cc2f-46a2-a221-497ac65eb3c2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../lab3/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/out/production/lab3/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/out/production/lab3/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/out/production/lab3/Producer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/out/production/lab3/Producer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/out/production/lab3/Robot.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/out/production/lab3/Robot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/out/production/lab3/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/out/production/lab3/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/src/Producer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/Producer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/src/Robot.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/Robot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/src/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/Student.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,29 +22,25 @@
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\soata\Projects\Javalabs\lab3_1\.idea" />
+      </set>
+    </option>
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
-  <component name="ProjectId" id="1bA5ATEBe4fyetStAMzbCwwA9g8" />
+  <component name="ProjectId" id="1bDMtIUelh8cFGZH7CB61QG3nlc" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/JAVA_lab_3-master/JAVA_lab_3-master" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -56,7 +58,7 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="lab3" />
-      <option name="PROGRAM_PARAMETERS" value="7" />
+      <option name="PROGRAM_PARAMETERS" value="5" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -85,13 +87,13 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c36df02d-15e1-4b39-a2d0-0354260d1ca0" name="Default Changelist" comment="" />
-      <created>1588061913567</created>
+      <changelist id="dba57ac3-cc2f-46a2-a221-497ac65eb3c2" name="Default Changelist" comment="" />
+      <created>1588162423744</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1588061913567</updated>
-      <workItem from="1588061918776" duration="21603000" />
-      <workItem from="1588088614154" duration="2268000" />
+      <updated>1588162423744</updated>
+      <workItem from="1588162427432" duration="2844000" />
+      <workItem from="1588171707901" duration="11594000" />
     </task>
     <servers />
   </component>
@@ -103,7 +105,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

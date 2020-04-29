@@ -2,36 +2,40 @@ import java.util.concurrent.BlockingQueue;
 
 public class Robot implements Runnable {
 
-    private final BlockingQueue<Student> queueOfStudents;
-    private String subjectName;
+    public BlockingQueue<Student> queueOfStudents;
+    private  String subjectName;
+    private final Object monitor;
+
 
     @Override
     public void run() {
-
         try {
             while (true) {
-                Student currStudent = queueOfStudents.peek();
-                if (currStudent != null) {
-                    if (currStudent.getSubject().equals(this.subjectName)) {
+                System.out.println(Thread.currentThread().getName());
+                Student currStudent;
+                synchronized (monitor) {
+                    currStudent = queueOfStudents.peek();
+                    if (currStudent == null){
+                        monitor.wait();
+                    }
+                    else {
                         currStudent = queueOfStudents.take();
-                        System.out.println("Робот по " + subjectName + " начинает проверять студента №:" + currStudent.getNumberOfStudent());
-                        while (currStudent.getLabsCount() != 0) {
-                            process(currStudent);
+                        monitor.notifyAll();
+                        if (currStudent.getLabsCount() == -1) {
+                            System.out.println("Робот по " + subjectName + " закончил проверку");
+                            break;
                         }
                     }
-                    else if (currStudent.getSubject().equals("end")){
-                        System.out.println("Робот по " + subjectName + " закончил проверку");
-                        break;
-                    }
                 }
-
+                process(currStudent);
             }
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
     }
+
     private void process(Student currStudent) throws InterruptedException {
-        for (int i = 0; i < currStudent.getLabsCount() / 5; i++) {
+        while( currStudent.getLabsCount() > 0) {
             currStudent.decreaseLabs();
             System.out.println("Робот по " + subjectName + " проверил 5 работ у студента №:" + currStudent.getNumberOfStudent()
                     + " осталось:" + currStudent.getLabsCount() + " работ");
@@ -39,8 +43,11 @@ public class Robot implements Runnable {
         }
     }
 
-    public Robot(BlockingQueue<Student> queueOfStudents, String subjectName) {
+    public Robot(BlockingQueue<Student> queueOfStudents, String subjectName, Object mon) {
         this.queueOfStudents = queueOfStudents;
         this.subjectName = subjectName;
+        this.monitor = mon;
     }
+
+
 }
