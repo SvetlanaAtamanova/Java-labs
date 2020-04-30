@@ -27,7 +27,10 @@ public class Robot implements Runnable {
                         }
                     }
                 }
-                process(currStudent);
+                if (currStudent != null){
+                    process(currStudent);
+                }
+
             }
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
