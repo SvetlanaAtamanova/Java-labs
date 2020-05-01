@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="dba57ac3-cc2f-46a2-a221-497ac65eb3c2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/Robot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/Robot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Robot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Robot.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +49,7 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="lab3" />
-      <option name="PROGRAM_PARAMETERS" value="100" />
+      <option name="PROGRAM_PARAMETERS" value="20" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -87,7 +85,8 @@
       <updated>1588162423744</updated>
       <workItem from="1588162427432" duration="2844000" />
       <workItem from="1588171707901" duration="11594000" />
-      <workItem from="1588188682504" duration="1238000" />
+      <workItem from="1588188682504" duration="2502000" />
+      <workItem from="1588326391591" duration="634000" />
     </task>
     <servers />
   </component>
