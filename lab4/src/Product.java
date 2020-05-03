@@ -4,9 +4,9 @@ public class Product {
     public int id;
     public String prodid;
     public String title;
-    public int cost;
+    public double cost;
 
-    public Product(int id, String prodid, String title, int cost) {
+    public Product(int id, String prodid, String title, double cost) {
         if (cost <= 0) {
             throw new IllegalArgumentException("Incorrect cost, cost should be positive!");
         }
@@ -16,7 +16,7 @@ public class Product {
         this.cost = cost;
     }
 
-    public Product(String title, int cost) {
+    public Product(String title, double cost) {
         this(1, UUID.randomUUID().toString(), title, cost);
     }
 

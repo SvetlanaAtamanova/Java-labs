@@ -41,7 +41,7 @@ public class Main {
                     switch (command) {
                         case "/add": {
                             String title = scanner.next();
-                            int cost = scanner.nextInt();
+                            double cost = scanner.nextDouble();
                             if (cost <= 0) {
                                 System.out.println("Incorrect cost, cost should be positive!");
                                 break;
@@ -68,7 +68,7 @@ public class Main {
                         }
                         case "/change_price": {
                             String title = scanner.next();
-                            int cost = scanner.nextInt();
+                            double cost = scanner.nextDouble();
                             if (cost < 0) {
                                 System.out.println("Incorrect cost, cost should be positive!");
                                 break;
@@ -77,8 +77,8 @@ public class Main {
                             break;
                         }
                         case "/filter_by_price": {
-                            int min = scanner.nextInt();
-                            int max = scanner.nextInt();
+                            double min = scanner.nextDouble();
+                            double max = scanner.nextDouble();
                             if (max < 0 || min < 0) {
                                 System.out.println("Incorrect cost, cost should be positive!");
                                 break;

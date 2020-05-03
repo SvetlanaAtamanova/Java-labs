@@ -6,7 +6,7 @@ import java.util.*;
 
 public class DbHandler {
 
-    private static final String CON_STR = "jdbc:sqlite:C:/SQLite/products.db";
+    private static final String CON_STR = "jdbc:sqlite:products.db";
     private static DbHandler instance = null;
 
     public static synchronized DbHandler getInstance() throws SQLException {
@@ -29,7 +29,7 @@ public class DbHandler {
                     "id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
                     "prodid VARCHAR(70) NOT NULL, " +
                     "title VARCHAR(70) NOT NULL, " +
-                    "cost INTEGER NOT NULL, " +
+                    "cost DOUBLE NOT NULL, " +
                     "UNIQUE (id), UNIQUE(prodid), UNIQUE(title))");
         } catch (SQLException e) {
             throw new RuntimeException("Failed to create table.", e);
@@ -63,7 +63,7 @@ public class DbHandler {
                 products.add(new Product(resultSet.getInt("id"),
                         resultSet.getString("prodid"),
                         resultSet.getString("title"),
-                        resultSet.getInt("cost")));
+                        resultSet.getDouble("cost")));
             }
             return products;
 
@@ -104,7 +104,7 @@ public class DbHandler {
             statement.setString(1, title);
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
-                int cost = resultSet.getInt("cost");
+                double cost = resultSet.getDouble("cost");
                 System.out.println("Cost = " + cost);
             } else {
                 System.out.println("Такого товара нет");
@@ -114,32 +114,34 @@ public class DbHandler {
         }
     }
 
-    public void updatePrice(String title, int price) {
+    public void updatePrice(String title, double price) {
         if (price < 0) {
             throw new IllegalArgumentException("Incorrect cost, cost should be positive!");
         }
         try (PreparedStatement statement = this.connection.prepareStatement(
                 "UPDATE " + "Products" + " SET cost = ? WHERE title = ?")){
-            statement.setInt(1, price);
+            statement.setDouble(1, price);
             statement.setString(2, title);
             if (statement.executeUpdate() == 0) {
-                throw new IllegalArgumentException("Такого товара нет");
+                System.out.println("Такого товара нет");
             }
         } catch (SQLException e) {
-            throw new RuntimeException("Failed to update table.", e);
+            System.out.println("Такого товара нет");
         }
     }
 
-    public List<Product> getProductsFromInterval(int priceFrom, int priceTo) {
+    public List<Product> getProductsFromInterval(double priceFrom, double priceTo) {
         try (Statement statement = this.connection.createStatement()) {
             List<Product> products = new ArrayList<Product>();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM " + "Products" +
                     " WHERE cost BETWEEN " + priceFrom +" AND " + priceTo);
+            //statement.setInt(1, priceFrom);
+            //statement.setInt(2, priceTo);
             while (resultSet.next()) {
                 products.add(new Product(resultSet.getInt("id"),
                         resultSet.getString("prodid"),
                         resultSet.getString("title"),
-                        resultSet.getInt("cost")));
+                        resultSet.getDouble("cost")));
             }
             return products;
 
