@@ -46,6 +46,7 @@ public class Main {
                                 System.out.println("Incorrect cost, cost should be positive!");
                                 break;
                             }
+                            System.out.println(cost);
                             dbHandler.addProduct(new Product(title, cost));
                             break;
                         }
