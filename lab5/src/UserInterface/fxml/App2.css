@@ -20,6 +20,7 @@
 	*/
 * {
     -color : #66FFFF;
+    -forLabel : #9933FF;
     -white : #efefef;
     -gray : #dfdfdf;
     -darkGray : #383838;
@@ -100,7 +101,7 @@
  * **********
 */
 .label{
-    -fx-text-fill : -black;
+    -fx-text-fill : -forLabel;
 }
 
 /*

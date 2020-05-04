@@ -20,7 +20,7 @@
             <children>
                 <HBox alignment="CENTER" prefHeight="40.0" prefWidth="600.0" spacing="10.0">
                     <children>
-                        <Text fx:id="textProductTitle" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="heading-1" text="Введите новую цену" wrappingWidth="202.3564453125" />
+                        <Text fx:id="textProductTitle" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="heading-1" text="Товар" wrappingWidth="74.3564453125" />
                     </children>
                 </HBox>
                 <HBox alignment="CENTER" prefHeight="40.0" prefWidth="600.0" spacing="10.0">

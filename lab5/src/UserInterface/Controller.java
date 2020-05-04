@@ -266,7 +266,7 @@ public class Controller {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.initOwner(mainApp.getPrimaryStage());
         alert.setTitle("Error");
-        alert.setHeaderText("Something went wrong.");
+        alert.setHeaderText("");
         alert.setContentText(message);
         alert.showAndWait();
     }
@@ -275,7 +275,7 @@ public class Controller {
         Alert alert = new Alert(Alert.AlertType.WARNING);
         alert.initOwner(mainApp.getPrimaryStage());
         alert.setTitle("Warning");
-        alert.setHeaderText("Maybe you made a mistake somewhere.");
+        alert.setHeaderText("Check your input");
         alert.setContentText(message);
         alert.showAndWait();
     }
