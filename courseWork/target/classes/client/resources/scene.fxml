@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="649.0" prefWidth="1220.0" stylesheets="@App.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controller.MainWindowController">
+   <children>
+      <TabPane layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="1205.0" styleClass="tab-pane-default" tabClosingPolicy="UNAVAILABLE">
+         <padding>
+            <Insets top="35.0" />
+         </padding>
+         <tabs>
+            <Tab text="Journal">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="517.0" prefWidth="891.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" layoutX="2.0" prefHeight="500.0" prefWidth="792.0">
+                           <children>
+                              <ToolBar nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" VBox.vgrow="NEVER" />
+                              <TableView id="table" fx:id="tableJournal" prefHeight="454.0" prefWidth="803.0" VBox.vgrow="NEVER">
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                                 <columns>
+                                    <TableColumn fx:id="idJournal" editable="false" maxWidth="200.0" minWidth="0.0" prefWidth="53.0" text="ID" />
+                                    <TableColumn fx:id="bookIdColumn" editable="false" maxWidth="1000.0" minWidth="0.0" prefWidth="141.0" text="BookID" />
+                                    <TableColumn fx:id="clientIdColumn" maxWidth="600.0" minWidth="0.0" prefWidth="187.0" text="ClientID" />
+                                    <TableColumn fx:id="dateBegColumn" maxWidth="600.0" minWidth="0.0" prefWidth="114.0" text="Date begin" />
+                                    <TableColumn fx:id="dateEndColumn" maxWidth="600.0" minWidth="0.0" prefWidth="121.0" text="Date end" />
+                                    <TableColumn fx:id="dateRetColumn" maxWidth="600.0" minWidth="0.0" prefWidth="124.0" text="Date return" />
+                                 </columns>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <VBox.margin>
+                                    <Insets bottom="25.0" left="25.0" right="25.0" top="5.0" />
+                                 </VBox.margin>
+                              </TableView>
+                              <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="1200.0" spacing="15.0">
+                                 <VBox.margin>
+                                    <Insets left="25.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <!--<Button fx:id="btnShowAll" layoutX="949.0" layoutY="335.0" mnemonicParsing="false" onAction="#JournalReload" prefHeight="39.0" prefWidth="217.0" styleClass="btn-info" text="Показать все " />-->
+                        <Button fx:id="btnAdd" layoutX="949.0" layoutY="164.0" mnemonicParsing="false" onAction="#JournalAdd" prefHeight="39.0" prefWidth="217.0" styleClass="btn-info" text="Добавить запись" />
+                        <Button fx:id="btnDelete" layoutX="949.0" layoutY="279.0" mnemonicParsing="false" onAction="#JournalDelete" prefHeight="39.0" prefWidth="217.0" styleClass="btn-info" text="Удалить" />
+                        <Button fx:id="btnUpdate" layoutX="949.0" layoutY="221.0" mnemonicParsing="false" onAction="#JournalUpdate" prefHeight="39.0" prefWidth="217.0" styleClass="btn-info" text="Изменить " />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Clients">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="517.0" prefWidth="891.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" layoutX="2.0" prefHeight="526.0" prefWidth="919.0">
+                           <children>
+                              <ToolBar nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" VBox.vgrow="NEVER" />
+                              <TableView id="table" fx:id="tableClients" prefHeight="419.0" prefWidth="863.0" VBox.vgrow="NEVER">
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                                 <columns>
+                                    <TableColumn fx:id="idClient" editable="false" maxWidth="200.0" minWidth="0.0" prefWidth="57.0" text="ID" />
+                                    <TableColumn fx:id="firstNameColumn" editable="false" maxWidth="600.0" minWidth="0.0" prefWidth="140.0" text="First name" />
+                                    <TableColumn fx:id="lastNameColumn" maxWidth="1000.0" minWidth="0.0" prefWidth="300.0" text="Last name" />
+                                    <TableColumn fx:id="fatherNameColumn" maxWidth="600.0" minWidth="0.0" prefWidth="135.0" text="Father name" />
+                                    <TableColumn fx:id="pSeria" maxWidth="450.0" minWidth="0.0" prefWidth="60.0" text="Passport ser" />
+                                    <TableColumn fx:id="pNumber" maxWidth="480.0" minWidth="0.0" prefWidth="90.0" text="Passport num" />
+                                 </columns>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <VBox.margin>
+                                    <Insets bottom="25.0" left="25.0" right="25.0" top="5.0" />
+                                 </VBox.margin>
+                              </TableView>
+                              <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="1200.0" spacing="15.0">
+                                 <VBox.margin>
+                                    <Insets left="25.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <!--<Button fx:id="btnShowAll1" layoutX="945.0" layoutY="333.0" mnemonicParsing="false" onAction="#ClientReload" prefHeight="39.0" prefWidth="217.0" styleClass="btn-info" text="Показать все " />-->
+                        <Button fx:id="btnAdd1" layoutX="945.0" layoutY="148.0" mnemonicParsing="false" onAction="#ClientAdd" prefHeight="39.0" prefWidth="217.0" styleClass="btn-info" text="Добавить клиента" />
+                        <Button fx:id="btnDelete1" layoutX="945.0" layoutY="272.0" mnemonicParsing="false" onAction="#ClientDelete" prefHeight="39.0" prefWidth="217.0" styleClass="btn-info" text="Удалить " />
+                        <Button fx:id="btnUpdate1" layoutX="945.0" layoutY="211.0" mnemonicParsing="false" onAction="#ClientUpdate" prefHeight="39.0" prefWidth="217.0" styleClass="btn-info" text="Изменить " />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Books">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="517.0" prefWidth="891.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" layoutX="2.0" prefHeight="500.0" prefWidth="792.0">
+                           <children>
+                              <ToolBar nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" VBox.vgrow="NEVER" />
+                              <TableView id="table" fx:id="tableBooks" prefHeight="454.0" prefWidth="803.0" VBox.vgrow="NEVER">
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                                 <columns>
+                                    <TableColumn fx:id="bookId" editable="false" maxWidth="200.0" minWidth="0.0" prefWidth="57.0" text="ID" />
+                                    <TableColumn fx:id="nameColumn" editable="false" maxWidth="1000.0" minWidth="0.0" prefWidth="400.0" text="Name" />
+                                    <TableColumn fx:id="countColumn" maxWidth="600.0" minWidth="0.0" prefWidth="120.0" text="Count" />
+                                    <TableColumn fx:id="typeIdColumn" maxWidth="600.0" minWidth="0.0" prefWidth="130.0" text="TypeID" />
+                                 </columns>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <VBox.margin>
+                                    <Insets bottom="25.0" left="25.0" right="25.0" top="5.0" />
+                                 </VBox.margin>
+                              </TableView>
+                              <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="1200.0" spacing="15.0">
+                                 <VBox.margin>
+                                    <Insets left="25.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <!--<Button fx:id="btnShowAll3" layoutX="934.0" layoutY="320.0" mnemonicParsing="false" onAction="#BookReload" prefHeight="39.0" prefWidth="217.0" styleClass="btn-info" text="Показать все " />-->
+                        <Button fx:id="btnAdd3" layoutX="934.0" layoutY="134.0" mnemonicParsing="false" onAction="#BookAdd" prefHeight="39.0" prefWidth="217.0" styleClass="btn-info" text="Добавить книгу" />
+                        <Button fx:id="btnDelete3" layoutX="934.0" layoutY="260.0" mnemonicParsing="false" onAction="#BookDelete" prefHeight="39.0" prefWidth="217.0" styleClass="btn-info" text="Удалить " />
+                        <Button fx:id="btnUpdate3" layoutX="934.0" layoutY="196.0" mnemonicParsing="false" onAction="#BookUpdate" prefHeight="39.0" prefWidth="217.0" styleClass="btn-info" text="Изменить " />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Book types">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="517.0" prefWidth="891.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" layoutX="2.0" prefHeight="500.0" prefWidth="792.0">
+                           <children>
+                              <ToolBar nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" VBox.vgrow="NEVER" />
+                              <TableView id="table" fx:id="tableTypes" prefHeight="454.0" prefWidth="803.0" VBox.vgrow="NEVER">
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                                 <columns>
+                                    <TableColumn fx:id="typeId" editable="false" maxWidth="200.0" minWidth="0.0" prefWidth="65.0" text="ID" />
+                                    <TableColumn fx:id="typeNameColumn" editable="false" maxWidth="1100.0" minWidth="0.0" prefWidth="306.0" text="Name" />
+                                    <TableColumn fx:id="typeCountColumn" maxWidth="600.0" minWidth="0.0" prefWidth="75.0" text="Count" />
+                                    <TableColumn fx:id="fineColumn" maxWidth="600.0" minWidth="0.0" prefWidth="100.0" text="Fine" />
+                                    <TableColumn fx:id="dayCount" maxWidth="600.0" minWidth="0.0" prefWidth="102.0" text="Day count" />
+                                 </columns>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <VBox.margin>
+                                    <Insets bottom="25.0" left="25.0" right="25.0" top="5.0" />
+                                 </VBox.margin>
+                              </TableView>
+                              <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="1200.0" spacing="15.0">
+                                 <VBox.margin>
+                                    <Insets left="25.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <!--<Button fx:id="btnShowAll4" layoutX="900.0" layoutY="303.0" mnemonicParsing="false" onAction="#TypeReload" prefHeight="39.0" prefWidth="217.0" styleClass="btn-info" text="Показать все " />-->
+                        <Button fx:id="btnAdd4" layoutX="900.0" layoutY="119.0" mnemonicParsing="false" onAction="#TypeAdd" prefHeight="39.0" prefWidth="217.0" styleClass="btn-info" text="Добавить тип" />
+                        <Button fx:id="btnDelete4" layoutX="900.0" layoutY="241.0" mnemonicParsing="false" onAction="#TypeDelete" prefHeight="39.0" prefWidth="217.0" styleClass="btn-info" text="Удалить " />
+                        <Button fx:id="btnUpdate4" layoutX="900.0" layoutY="179.0" mnemonicParsing="false" onAction="#TypeUpdate" prefHeight="39.0" prefWidth="217.0" styleClass="btn-info" text="Изменить " />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Label prefHeight="27.0" prefWidth="1129.0" text="                                                                                                               Library" />
+   </children>
+</AnchorPane>
