@@ -116,9 +116,9 @@ public class JournalController {
                 labelId.setVisible(false);
                 fieldId.setVisible(false);
                 labelEnd.setVisible(false);
-               // dateEnd.setVisible(false);
+                dateEnd.setVisible(false);
                 labelRet.setVisible(false);
-                //dateRet.setVisible(false);
+                dateRet.setVisible(false);
                 break;
             case Delete:
                 setVisibleForContent(false);

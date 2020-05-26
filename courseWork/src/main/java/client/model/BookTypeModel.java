@@ -56,20 +56,5 @@ public class BookTypeModel {
         return  name;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof BookTypeModel)) return false;
-        BookTypeModel that = (BookTypeModel) o;
-        return getId() == that.getId() &&
-                getCount() == that.getCount() &&
-                Double.compare(that.getFine(), getFine()) == 0 &&
-                getDayCount() == that.getDayCount() &&
-                Objects.equals(getName(), that.getName());
-    }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(getId(), getName(), getCount(), getFine(), getDayCount());
-    }
 }

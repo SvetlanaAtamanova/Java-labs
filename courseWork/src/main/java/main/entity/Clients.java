@@ -17,27 +17,27 @@ public class Clients {
     private long id;
 
     @Column(length = 20)
-   // @NotBlank(message = "First name is compulsory")
+    @NotBlank(message = "First name is compulsory")
     @Size(max = 20, message = "First name can't be longer than 20 characters")
     private String firstName;
 
     @Column(length = 20)
-    //@NotBlank(message = "Last name is compulsory")
+    @NotBlank(message = "Last name is compulsory")
     @Size(max = 20, message = "Last name can't be longer than 20 characters")
     private String lastName;
 
     @Column(length = 20)
-   // @NotBlank(message = "Father name is compulsory")
+    @NotBlank(message = "Father name is compulsory")
     @Size(max = 20, message = "Father name can't be longer than 20 characters")
     private String fatherName;
 
     @Column(length = 20)
-  //  @NotBlank(message = "Passport seria is compulsory")
+    @NotBlank(message = "Passport seria is compulsory")
     @Size(max = 20, message = "Passport seria can't be longer than 20 characters")
     private String passportSeria;
 
     @Column(length = 20)
-    //@NotBlank(message = "Passport number is compulsory")
+    @NotBlank(message = "Passport number is compulsory")
     @Size(max = 20, message = "Passport number can't be longer than 20 characters")
     private String passportNum;
 

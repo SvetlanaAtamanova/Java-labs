@@ -18,7 +18,7 @@ public class BookTypes {
     private long id;
 
     @Column(length = 50, unique = true)
-    //@NotBlank(message = "Book type is compulsory")
+    @NotBlank(message = "Book type is compulsory")
     @Size(max = 50, message = "Book type can't be longer than 50 characters")
     private String name;
 

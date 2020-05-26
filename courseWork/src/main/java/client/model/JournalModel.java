@@ -82,21 +82,4 @@ public class JournalModel {
                 '}';
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof JournalModel)) return false;
-        JournalModel that = (JournalModel) o;
-        return getId() == that.getId() &&
-                Objects.equals(getBook(), that.getBook()) &&
-                Objects.equals(getClient(), that.getClient()) &&
-                Objects.equals(getDateBeg(), that.getDateBeg()) &&
-                Objects.equals(getDateEnd(), that.getDateEnd()) &&
-                Objects.equals(getDateRet(), that.getDateRet());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getId(), getBook(), getClient(), getDateBeg(), getDateEnd(), getDateRet());
-    }
 }

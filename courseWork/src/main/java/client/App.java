@@ -45,18 +45,6 @@ public class App extends Application {
         bookApi = component.provideBook();
         bookTypeApi = component.provideType();
         auth = component.provideAuthApi();
-        /*user = new UserModel("user", "pwd");
-        auth.singIn(user).subscribe(response -> {
-            if (response.isSuccessful()) {
-                token = "Bearer " + response.body();
-                showMainWindow();
-                primaryStage.setResizable(false);
-                primaryStage.show();
-            } else {
-                createAlertError("Error!. Code = " + response.code());
-            }
-        });*/
-        System.out.println("1");
         showAuthWindow();
         primaryStage.setResizable(false);
         primaryStage.show();

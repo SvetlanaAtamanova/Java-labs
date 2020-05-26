@@ -18,15 +18,15 @@ public class Journal {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-   // @NotBlank(message = "Book id is compulsory")
+    @NotBlank(message = "Book id is compulsory")
     @ManyToOne(targetEntity = Books.class)
     private Books book;
 
-   // @NotBlank(message = "Client id is compulsory")
+    @NotBlank(message = "Client id is compulsory")
     @ManyToOne(targetEntity = Clients.class)
     private Clients client;
 
-   // @NotBlank(message = "Date is compulsory")
+    @NotBlank(message = "Date is compulsory")
     private String dateBeg;
 
     private String dateEnd;
