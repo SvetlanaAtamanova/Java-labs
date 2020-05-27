@@ -27,7 +27,7 @@ public class TestDataInit implements CommandLineRunner {
         userRepository.deleteAll();
         userRepository.save(new User("sveta", passwordEncoder.encode("0304"), Collections.singletonList("ROLE_USER")));
         userRepository.save(new User("user", passwordEncoder.encode("pwd"), Collections.singletonList("ROLE_USER")));
-
+        userRepository.save(new User("admin", passwordEncoder.encode("apwd"), Collections.singletonList("ROLE_ADMIN")));
         //clientsRepository.save(new Clients("Ivanov", "Ivan", "Ivanovich", "1111", "444444"));
         //clientsRepository.save(new Clients("Sidorov", "Ilya", "Olegovich", "1111", "444444"));
 
