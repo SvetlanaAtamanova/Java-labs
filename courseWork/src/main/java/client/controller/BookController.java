@@ -91,7 +91,7 @@ public class BookController {
     public void onClickAdd() {
         switch (action) {
             case Add:
-                if (fieldName.getText().isEmpty() || fieldCount.getText().isEmpty() || fieldCount.getText().isEmpty() || typeBox.getValue() == null) {
+                if (fieldName.getText().isBlank() || fieldCount.getText().isBlank() || fieldCount.getText().isBlank() || typeBox.getValue() == null) {
                     app.createAlertWarning("Fields cannot be empty");
                 } else {
                     long count = extractInteger(fieldCount);
@@ -112,7 +112,7 @@ public class BookController {
                 }
                 break;
             case Delete:
-                if (fieldId.getText().isEmpty()) {
+                if (fieldId.getText().isBlank()) {
                     app.createAlertWarning("Id cannot be empty");
                     return;
                 }
@@ -163,7 +163,7 @@ public class BookController {
             case Update:
                 String idString = fieldId.getText();
                 String newName = fieldName.getText();
-                if (idString.isEmpty() || newName.isEmpty() || fieldCount.getText().isEmpty() || typeBox.getValue() == null) {
+                if (idString.isBlank() || newName.isBlank() || fieldCount.getText().isBlank() || typeBox.getValue() == null) {
                     app.createAlertWarning("Fields cannot be empty");
                 } else {
                     try {

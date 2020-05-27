@@ -86,7 +86,7 @@ public class ClientController {
     public void onClickAdd() {
         switch (action) {
             case Add:
-                if (fieldFirstName.getText().isEmpty() || fieldLastName.getText().isEmpty() || fieldFatherName.getText().isEmpty() || fieldPassportSer.getText().isEmpty() || fieldPassportNum.getText().isEmpty()) {
+                if (fieldFirstName.getText().isBlank() || fieldLastName.getText().isBlank() || fieldFatherName.getText().isBlank() || fieldPassportSer.getText().isBlank() || fieldPassportNum.getText().isBlank()) {
                     app.createAlertWarning("Fields cannot be empty");
                 } else {
                     if (checkClient()){
@@ -105,7 +105,7 @@ public class ClientController {
                 }
                 break;
             case Delete:
-                if (fieldId.getText().isEmpty()) {
+                if (fieldId.getText().isBlank()) {
                     app.createAlertWarning("Id cannot be empty");
                     return;
                 }
@@ -142,7 +142,7 @@ public class ClientController {
                 break;
             case Update:
                 String idString = fieldId.getText();
-                if (idString.isEmpty() || fieldLastName.getText().isEmpty() || fieldFatherName.getText().isEmpty() || fieldPassportSer.getText().isEmpty() || fieldPassportNum.getText().isEmpty()) {
+                if (idString.isBlank() || fieldLastName.getText().isBlank() || fieldFatherName.getText().isBlank() || fieldPassportSer.getText().isBlank() || fieldPassportNum.getText().isBlank()) {
                     app.createAlertWarning("Fields cannot be empty");
                 } else {
                     try {

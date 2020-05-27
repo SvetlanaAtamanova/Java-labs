@@ -172,7 +172,12 @@
                     <include>**/*.css</include>
                 </includes>
             </resource>
-
+            <resource>
+                <directory>src/main/java/resources</directory>
+                <includes>
+                    <include>**/*.properties</include>
+                </includes>
+            </resource>
         </resources>
     </build>
 

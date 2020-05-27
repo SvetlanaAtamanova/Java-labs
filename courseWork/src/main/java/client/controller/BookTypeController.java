@@ -84,7 +84,7 @@ public class BookTypeController {
     public void onClickAdd() {
         switch (action) {
             case Add:
-                if (fieldName.getText().isEmpty() || fieldFine.getText().isEmpty() || fieldDayCount.getText().isEmpty()) {
+                if (fieldName.getText().isBlank() || fieldFine.getText().isBlank() || fieldDayCount.getText().isBlank()) {
                     app.createAlertWarning("Fields cannot be empty");
                 } else {
                     app.getBookTypeApi().createType(app.getToken(), new BookTypeModel(fieldName.getText(), 0, extractDouble(fieldFine), extractInteger(fieldDayCount))).subscribe(response -> {
@@ -98,7 +98,7 @@ public class BookTypeController {
                 }
                 break;
             case Delete:
-                if (fieldId.getText().isEmpty()) {
+                if (fieldId.getText().isBlank()) {
                     app.createAlertWarning("Id cannot be empty");
                     return;
                 }
@@ -136,7 +136,7 @@ public class BookTypeController {
             case Update:
                 String idString = fieldId.getText();
                 String newName = fieldName.getText();
-                if (idString.isEmpty() || newName.isEmpty() || fieldCount.getText().isEmpty() || fieldFine.getText().isEmpty() || fieldDayCount.getText().isEmpty()) {
+                if (idString.isBlank() || newName.isBlank() || fieldCount.getText().isBlank() || fieldFine.getText().isBlank() || fieldDayCount.getText().isBlank()) {
                     app.createAlertWarning("Fields cannot be empty");
                 } else {
                     try {

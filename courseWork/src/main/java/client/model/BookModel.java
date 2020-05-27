@@ -45,5 +45,19 @@ public class BookModel {
         return name;
     }
 
+   /* @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof BookModel)) return false;
+        BookModel bookModel = (BookModel) o;
+        return getId() == bookModel.getId() &&
+                getCount() == bookModel.getCount() &&
+                Objects.equals(getName(), bookModel.getName()) &&
+                Objects.equals(getType(), bookModel.getType());
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getName(), getCount(), getType());
+    }*/
 }

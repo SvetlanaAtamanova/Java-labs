@@ -3,6 +3,7 @@ package client.controller;
 import client.App;
 import client.model.UserModel;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
@@ -23,7 +24,7 @@ public class AuthController {
 
     @FXML
     public void onClickAdd() {
-        if (fieldUser.getText().isEmpty() || fieldPassword.getText().isEmpty()) {
+        if (fieldUser.getText().isBlank() || fieldPassword.getText().isBlank()) {
             app.createAlertWarning("Fields cannot be empty");
         } else {
             UserModel userModel = new UserModel(fieldUser.getText(), fieldPassword.getText());

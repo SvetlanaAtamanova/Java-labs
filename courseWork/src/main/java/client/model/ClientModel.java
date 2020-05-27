@@ -57,5 +57,21 @@ public class ClientModel {
         return firstName + " " + lastName + " " + fatherName ;
     }
 
+  /*  @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof ClientModel)) return false;
+        ClientModel that = (ClientModel) o;
+        return getId() == that.getId() &&
+                Objects.equals(getFirstName(), that.getFirstName()) &&
+                Objects.equals(getLastName(), that.getLastName()) &&
+                Objects.equals(getFatherName(), that.getFatherName()) &&
+                Objects.equals(getPassportSeria(), that.getPassportSeria()) &&
+                Objects.equals(getPassportNum(), that.getPassportNum());
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getFirstName(), getLastName(), getFatherName(), getPassportSeria(), getPassportNum());
+    }*/
 }
